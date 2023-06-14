@@ -40,17 +40,16 @@ public class CustomerMaintenanceSteps {
 
     @When("I submit the form")
     public void i_submit_the_form() {
-        status = customer.validate();
-
+        status = customer.submit();
     }
 
     @Then("the system should output the status of the customer {string}")
     public void the_system_should_output_the_status_of_the_customer(String expectedError) {
         System.out.println("Expected: " + expectedError);
         System.out.println("Given: " + status);
-        if(status.equals(expectedError)){
+        if (status.equals(expectedError)) {
             System.out.println("Pass");
-        } else{
+        } else {
             System.out.println("Fail");
         }
     }

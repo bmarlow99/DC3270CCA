@@ -5,7 +5,7 @@ public class Customer {
     public Integer YearsResided;
     String status;
 
-    public String validate() {
+    public String submit() {
         if (FirstName.length() < 1 || FirstName.length() > 50) {
             status = "Invalid First Name";
         } else if (LastName.length() < 1 || LastName.length() > 50) {
@@ -14,7 +14,7 @@ public class Customer {
             status = "Invalid Purpose";
         } else if (YearsResided <= 0 || YearsResided > 999) {
             status = "Invalid Years Resided";
-        }else{
+        } else {
             status = "Valid";
         }
 
