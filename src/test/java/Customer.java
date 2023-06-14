@@ -6,10 +6,15 @@ public class Customer {
     String status;
 
     public String validate() {
-        System.out.println(FirstName.length());
         if (FirstName.length() < 1 || FirstName.length() > 50) {
             status = "Invalid First Name";
-        } else {
+        } else if (LastName.length() < 1 || LastName.length() > 50) {
+            status = "Invalid Last Name";
+        } else if (!Purpose.equals("L") && !Purpose.equals("E") && !Purpose.equals("S") && !Purpose.equals("I")) {
+            status = "Invalid Purpose";
+        } else if (YearsResided <= 0 || YearsResided > 999) {
+            status = "Invalid Years Resided";
+        }else{
             status = "Valid";
         }
 

@@ -46,12 +46,12 @@ public class CustomerMaintenanceSteps {
 
     @Then("the system should output the status of the customer {string}")
     public void the_system_should_output_the_status_of_the_customer(String expectedError) {
-        System.out.println("Expected:" + expectedError);
-        System.out.println("Given" + status);
+        System.out.println("Expected: " + expectedError);
+        System.out.println("Given: " + status);
         if(status.equals(expectedError)){
-            System.out.println("happy");
+            System.out.println("Pass");
         } else{
-            System.out.println("unhappy");
+            System.out.println("Fail");
         }
     }
 
