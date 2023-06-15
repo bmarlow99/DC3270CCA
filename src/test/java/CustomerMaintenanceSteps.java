@@ -8,6 +8,8 @@ import io.cucumber.java.*;
 import io.cucumber.java.*;
 import org.junit.Assert;
 
+import static junit.framework.TestCase.assertEquals;
+
 public class CustomerMaintenanceSteps {
 
     Customer customer;
@@ -45,13 +47,7 @@ public class CustomerMaintenanceSteps {
 
     @Then("the system should output the status of the customer {string}")
     public void the_system_should_output_the_status_of_the_customer(String expectedError) {
-        System.out.println("Expected: " + expectedError);
-        System.out.println("Given: " + status);
-        if (status.equals(expectedError)) {
-            System.out.println("Pass");
-        } else {
-            System.out.println("Fail");
-        }
+        assertEquals(expectedError, status);
     }
 
 
