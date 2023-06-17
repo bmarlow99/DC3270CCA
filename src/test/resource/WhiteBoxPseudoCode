@@ -1,0 +1,15 @@
+Customer add/edit - First Name
+1. READ First Name (fn)
+2. READ Last Name (ln)
+3. READ Purpose (p)
+4. READ Years Resided (y)
+5. IF fn.length < 1 OR fn.length > 50
+    a. PRINT "Invalid First Name"
+6. ELSE IF ln.length <1 OR fn.length > 50
+    a. PRINT "Invalid Last Name"
+7. ELSE IF p != "L" AND p != "E" AND p != "S" AND p != "I"
+    a. PRINT "Invalid Purpose"
+8. ELSE IF y <= 0 OR y >999
+    a. PRINT "Invalid Years Resided"
+9. ELSE PRINT "Valid"
+10. END

@@ -49,6 +49,4 @@ public class CustomerMaintenanceSteps {
     public void the_system_should_output_the_status_of_the_customer(String expectedError) {
         assertEquals(expectedError, status);
     }
-
-
 }
